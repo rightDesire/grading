@@ -1,0 +1,38 @@
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin menu-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@mixin nav-item-text {
+  padding-left: 8px;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+@mixin style-header-link {
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $base-primary;
+  }
+
+  &:active:not(.header-menu__link--current) {
+    background-color: $base-secondary;
+  }
+}

@@ -1,0 +1,67 @@
+.header-nav {
+  @include flex;
+
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+  }
+}
+
+.header-nav__list {
+  @include list-reset;
+  @include flex;
+
+  @media (max-width: $mobile-width-only) {
+    order: 1;
+  }
+}
+
+.header-nav__item {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
+}
+
+.header-nav__link {
+  @include style-header-link;
+
+  display: flex;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  align-items: center;
+  padding: 22px;
+}
+
+.header-nav__item--user .header-nav__link::after {
+  @media (min-width: $desktop-width) {
+    @include nav-item-text;
+    content: "войти";
+    width: 50px;
+  }
+}
+
+.header-nav__item--union .header-nav__link {
+  @media (min-width: $desktop-width) {
+    &::after {
+      @include nav-item-text;
+
+      content: "корзина";
+      width: 70px;
+    }
+  }
+}
+
+.header-nav__link--user:hover .header-nav__image,
+.header-nav__link--user:focus .header-nav__image,
+.header-nav__link--user:active .header-nav__image {
+  color: $base-primary;
+}
+
+.header-nav__link--union:hover .header-nav__image,
+.header-nav__link--union:focus .header-nav__image,
+.header-nav__link--union:active .header-nav__image {
+  color: $base-primary;
+}

@@ -1,0 +1,111 @@
+.header-menu {
+  @include flex;
+
+  @media (max-width: $mobile-width-only) {
+    margin-right: -20px;
+    order: 2;
+  }
+}
+
+.header-menu__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header-menu--closed .header-menu__toggle:active {
+  background-color: $base-secondary;
+}
+
+.header-menu__toggle span {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 12px;
+  background-image: url("../images/icons/stack.svg#menu-closed"); //Не работает
+}
+
+.header-menu--nojs .header-menu__toggle {
+  display: none;
+}
+
+.header-menu__list {
+  @include list-reset;
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    margin-top: 60px;
+    background-color: $base_white;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-right: 60px;
+  }
+}
+
+.header-menu__item {
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    min-width: 320px;
+    border-bottom: 1px solid $base-secondary;
+
+    &:first-child {
+      border-top: 1px solid $base-secondary;
+    }
+  }
+}
+
+.header-menu__link {
+  @include style-header-link;
+
+  display: block;
+  width: inherit;
+  height: inherit;
+  padding: 20px 10px;
+  font-weight: 500;
+  word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    width: 104px;
+    padding: 32px 20px;
+  }
+
+  &--current {
+    @media (min-width: $tablet-width) {
+      color: $base-primary;
+      border-bottom: 2px solid $base-primary;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .header-menu--nojs .header-menu__list {
+    display: block;
+    position: absolute;
+    margin-top: 60px;
+    background-color: transparent;
+  }
+
+  .header-menu--closed .header-menu__list {
+    display: none;
+  }
+}

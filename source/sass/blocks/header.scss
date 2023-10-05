@@ -1,5 +1,47 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+.header__container {
+  @include flex;
+  min-height: 60px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+  }
+}
+
+.header__link-wrapper {
+  display: flex;
+  text-align: center;
+  align-self: center;
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      content: "Интернет-магазин кофейных напитков";
+      text-align: start;
+      width: 140px;
+      padding-top: 2px; //Подгон
+      padding-left: 20px;
+      font-size: 12px;
+      line-height: 16px;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.header__image {
+  @media (min-width: $tablet-width) {
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    height: 36px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

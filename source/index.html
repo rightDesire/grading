@@ -2,13 +2,59 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
-
+    <header class="header" data-test="header">
+      <div class="header__container container">
+        <div class="header__link-wrapper">
+          <a class="header__link link" href="#">
+            <picture>
+              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/content/logo-desktop.svg">
+              <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/content/logo-tablet.svg">
+              <img class="header__image" width="32" height="36" src="images/content/logo-mobile.svg" alt="Логотип Drink2Go.">
+            </picture>
+          </a>
+        </div>
+        <nav class="header-nav">
+          <div class="header-menu header-menu--nojs header-menu--closed">
+            <button class="header-menu__toggle" type="button" aria-label="Кнопка меню."><span></span></button>
+            <ul class="header-menu__list">
+              <li class="header-menu__item">
+                <span class="header-menu__link link header-menu__link--current">главная</span>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link link" href="#">каталог</a>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link link" href="#">доставка</a>
+              </li>
+              <li class="header-menu__item">
+                <a class="header-menu__link link" href="#">о нас</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="header-nav__list">
+            <li class="header-nav__item header-nav__item--user">
+              <a class="header-nav__link header-nav__link--user link" href="#" aria-label="Личный кабинет.">
+                <svg class="header-nav__image" width="16" height="16">
+                  <use xlink:href="images/icons/stack.svg#user-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-nav__item header-nav__item--union">
+              <a class="header-nav__link header-nav__link--union link" href="#" aria-label="Корзина товаров.">
+                <svg class="header-nav__image" width="16" height="16">
+                  <use xlink:href="images/icons/stack.svg#union-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <script src="js/script.js" defer></script>
   </body>
 </html>
