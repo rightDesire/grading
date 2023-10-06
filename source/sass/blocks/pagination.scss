@@ -1,0 +1,26 @@
+.pagination {
+  @include list-reset;
+
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 8px;
+  }
+}
+
+.pagination__link {
+  width: 62px;
+  height: 4px;
+  border: none;
+  border-radius: unset;
+  background-color: $base-white;
+}
+
+.pagination__link--current {
+  background-color: $base-primary;
+}

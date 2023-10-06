@@ -36,3 +36,50 @@
     background-color: $base-secondary;
   }
 }
+
+@mixin slider-switch {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  padding: 0;
+  color: $base-primary;
+  border: none;
+  background-color: transparent;
+  font-size: 36px;
+  font-weight: 500;
+  word-wrap: break-word;
+
+  cursor: pointer;
+
+  &:disabled {
+    color: $base-grey;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask: url("../images/icons/stack.svg#arrow");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+}
+
+@mixin linear-gradient ($deg) {
+  &:hover {
+    background: linear-gradient($deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:focus {
+    background: linear-gradient($deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    outline: none;
+  }
+
+  &:active {
+    background: linear-gradient($deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
