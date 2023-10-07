@@ -24,24 +24,28 @@
   }
 }
 
+.header-menu--closed .header-menu__toggle {
+  @media (max-width: $mobile-width-only) {
+    background-color: $base-black;
+    background-image: url("../images/content/menu-closed.svg");
+  }
+}
+
+.header-menu--opened .header-menu__toggle {
+  @media (max-width: $mobile-width-only) {
+    // background-color: aqua;
+    background-image: url("../images/content/menu-opened.svg");
+  }
+}
+
 .header-menu--closed .header-menu__toggle:active {
   background-color: $base-secondary;
 }
 
-.header-menu__toggle span {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 12px;
-  background-image: url("../images/icons/stack.svg#menu-closed"); //Не работает
-}
-
-.header-menu--nojs .header-menu__toggle {
-  display: none;
-}
-
 .header-menu__list {
   @include list-reset;
+
+  z-index: 1000;
 
   @media (max-width: $mobile-width-only) {
     position: absolute;
@@ -98,14 +102,17 @@
 }
 
 @media (max-width: $mobile-width-only) {
+  .header-menu--closed .header-menu__list {
+    display: none;
+  }
+
   .header-menu--nojs .header-menu__list {
     display: block;
     position: absolute;
     margin-top: 60px;
-    background-color: transparent;
   }
+}
 
-  .header-menu--closed .header-menu__list {
-    display: none;
-  }
+.header-menu--nojs .header-menu__toggle {
+  display: none;
 }

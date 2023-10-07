@@ -1,18 +1,6 @@
 .slider {
   position: relative;
   min-height: 656px;
-
-  @media (min-width: $tablet-width) {
-    min-height: 640px;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 714px;
-  }
-}
-
-.slider__wrapper {
-  min-height: 656px;
   color: $base-black;
   font-size: 14px;
   font-weight: 400;
@@ -40,4 +28,26 @@
   @include linear-gradient(270deg);
 
   right: 0;
+}
+
+.slider__arrow--prev {
+  transform: rotate(0);
+}
+
+.slider__arrow--next {
+  transform: rotate(180deg);
+}
+
+.slider--nojs {
+  & .slider__prev {
+    display: none;
+  }
+
+  & .slider__next {
+    display: none;
+  }
+
+  & .slider__pagination {
+    display: none;
+  }
 }

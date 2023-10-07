@@ -21,6 +21,11 @@
   background-color: $base-white;
 }
 
-.pagination__link--current {
+.pagination__item .pagination__link {
+  cursor: pointer;
+}
+
+.pagination__item--active .pagination__link {
   background-color: $base-primary;
+  cursor: auto;
 }

@@ -54,14 +54,12 @@
 
   &:disabled {
     color: $base-grey;
+    cursor: auto;
   }
 
-  &::after {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    mask: url("../images/icons/stack.svg#arrow");
+  &:disabled:hover,
+  &:disabled:focus {
+    background: unset;
   }
 
   @media (min-width: $tablet-width) {
