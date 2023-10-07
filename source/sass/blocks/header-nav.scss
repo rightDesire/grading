@@ -1,6 +1,8 @@
 .header-nav {
   @include flex;
 
+  flex-grow: 1;
+
   @media (min-width: $tablet-width) {
     min-height: 80px;
   }
@@ -12,6 +14,10 @@
 
   @media (max-width: $mobile-width-only) {
     order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 16px; //Подгон
   }
 }
 
@@ -58,7 +64,7 @@
     @include nav-item-text;
 
     content: "войти";
-    width: 50px;
+    max-width: 60px;
   }
 }
 
@@ -67,7 +73,7 @@
     @include nav-item-text;
 
     content: "корзина";
-    width: 70px;
+    max-width: 80px;
   }
 }
 

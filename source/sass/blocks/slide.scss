@@ -24,6 +24,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 60px;
+    padding-bottom: 0;
     margin-bottom: 188px;
   }
 
@@ -77,10 +78,12 @@
 
   @media (max-width: $mobile-width-only) {
     flex-grow: 1;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
+    flex-grow: 1;
+    margin-top: -12px;
     align-items: start;
     text-align: start;
   }
@@ -97,6 +100,7 @@
 
   @media (min-width: $desktop-width) {
     order: unset;
+    margin-left: 0;
   }
 }
 
@@ -119,17 +123,19 @@
 
   @media (min-width: $desktop-width) {
     order: unset;
+    margin-bottom: 18px; //Подгон
+    margin-left: 0;
   }
 }
 
 .slide__description {
-  max-width: 280px;
+  width: 280px; //не max-width из-за Pixel Perfect
   margin: 0 10px;
   margin-bottom: 20px;
   word-wrap: break-word;
 
   @media (min-width: $tablet-width) {
-    max-width: 608px;
+    width: 608px;
     font-size: 20px;
     line-height: 32px;
     order: 3;
@@ -137,6 +143,8 @@
 
   @media (min-width: $desktop-width) {
     order: unset;
+    margin-bottom: 40px;
+    margin-left: 0;
   }
 }
 
@@ -154,6 +162,7 @@
 
   @media (min-width: $desktop-width) {
     order: unset;
+    gap: 16px; //Подгон
   }
 }
 
@@ -165,7 +174,7 @@
   word-wrap: break-word;
 
   @media (min-width: $desktop-width) {
-    margin-left: 10px; //Подгон
+    margin-left: 0;
   }
 }
 

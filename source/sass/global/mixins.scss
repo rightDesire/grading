@@ -21,6 +21,10 @@
 
 @mixin nav-item-text {
   padding-left: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.24px;
   text-transform: uppercase;
   word-wrap: break-word;
 }
@@ -106,7 +110,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     left: 0;
-    transform: unset;
+    transform: translateX(25%); //Подгон
   }
 
   @media (min-width: $desktop-width) {

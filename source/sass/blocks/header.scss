@@ -1,9 +1,15 @@
 .header__container {
   @include flex;
   min-height: 60px;
+  column-gap: 88px;
 
   @media (min-width: $tablet-width) {
     min-height: 80px;
+    column-gap: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 158px;
   }
 }
 
@@ -16,7 +22,7 @@
     &::after {
       content: "Интернет-магазин кофейных напитков";
       text-align: start;
-      width: 140px;
+      max-width: 150px;
       padding-top: 2px; //Подгон
       padding-left: 20px;
       font-size: 12px;
