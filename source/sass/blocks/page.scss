@@ -1,11 +1,8 @@
-.page {
+.page__body {
+  position: relative;
   min-width: 320px;
+  margin: 0;
   font-family: $font-montserrat;
   font-size: 12px;
   font-weight: 400;
-}
-
-.page__body {
-  position: relative;
-  margin: 0;
 }

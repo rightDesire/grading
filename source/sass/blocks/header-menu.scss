@@ -112,13 +112,11 @@
     display: none;
   }
 
-  .header-menu--nojs .header-menu__list {
+  .header-nav--nojs .header-menu__list { //nojs для бургер-меню НЕ доделано
     display: block;
-    position: absolute;
-    margin-top: 60px;
   }
-}
 
-.header-menu--nojs .header-menu__toggle {
-  display: none;
+  .header-menu--nojs .header-menu__toggle {
+    display: none;
+  }
 }
