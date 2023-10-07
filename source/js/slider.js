@@ -1,8 +1,8 @@
 const slider = document.querySelector('.slider')
-const nextButton = document.querySelector('.slider__next')
-const prevButton = document.querySelector('.slider__prev')
+const nextButton = document.querySelector('.slider-button-next')
+const prevButton = document.querySelector('.slider-button-prev')
 const slides = Array.from(document.querySelectorAll('.slide'))
-const pagination = document.querySelector('.pagination')
+const pagination = document.querySelector('.slider-pagination')
 let currentIndex = 0;
 
 slider.classList.remove('slider--nojs')
@@ -11,8 +11,8 @@ slider.classList.remove('slider--nojs')
 slides.forEach((slide, index) => {
   const li = document.createElement('li');
   const button = document.createElement('button');
-  li.classList.add('pagination__item');
-  button.classList.add('pagination__link');
+  li.classList.add('slider-pagination__item');
+  button.classList.add('slider-pagination__link');
   li.appendChild(button);
   button.addEventListener('click', () => {
     setActiveSlide(index);
@@ -25,10 +25,10 @@ function setActiveSlide(index) {
   slides.forEach((slide, slideIndex) => {
     if (slideIndex === index) {
       slide.style.display = 'block';
-      pagination.children[index].classList.add('pagination__item--active');
+      pagination.children[index].classList.add('slider-pagination__item--active');
     } else {
       slide.style.display = 'none';
-      pagination.children[slideIndex].classList.remove('pagination__item--active');
+      pagination.children[slideIndex].classList.remove('slider-pagination__item--active');
     }
   });
   currentIndex = index;

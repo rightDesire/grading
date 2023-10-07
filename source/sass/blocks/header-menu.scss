@@ -24,17 +24,23 @@
   }
 }
 
-.header-menu--closed .header-menu__toggle {
+.header-menu--closed .header-menu__toggle::before {
   @media (max-width: $mobile-width-only) {
-    background-color: $base-black;
-    background-image: url("../images/content/menu-closed.svg");
+    content: "";
+    display: block;
+    width: 16px;
+    height: 12px;
+    background-image: url("/images/icons/stack.svg#menu-closed");
   }
 }
 
-.header-menu--opened .header-menu__toggle {
+.header-menu--opened .header-menu__toggle::before {
   @media (max-width: $mobile-width-only) {
-    // background-color: aqua;
-    background-image: url("../images/content/menu-opened.svg");
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url("/images/icons/stack.svg#menu-opened");
   }
 }
 

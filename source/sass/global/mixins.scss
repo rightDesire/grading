@@ -43,23 +43,33 @@
   width: 20px;
   height: 100%;
   padding: 0;
-  color: $base-primary;
   border: none;
   background-color: transparent;
-  font-size: 36px;
-  font-weight: 500;
-  word-wrap: break-word;
-
   cursor: pointer;
 
   &:disabled {
-    color: $base-grey;
     cursor: auto;
+  }
+
+  &:disabled::before {
+    background-color: $base-grey;
   }
 
   &:disabled:hover,
   &:disabled:focus {
     background: unset;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 20px;
+    display: block;
+    background-color: $base-primary;
+    mask-image: url("/images/icons/stack.svg#arrow")
   }
 
   @media (min-width: $tablet-width) {
@@ -79,5 +89,30 @@
 
   &:active {
     background: linear-gradient($deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+@mixin feature-icon {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 0;
+    transform: unset;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    left: 50%;
+    margin-bottom: 20px;
+    transform: translateX(-50%);
   }
 }

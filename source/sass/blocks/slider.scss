@@ -21,6 +21,10 @@
   @include linear-gradient(90deg);
 
   left: 0;
+
+  &::before {
+    transform: scaleX(1) translateX(-50%) translateY(-50%);
+  }
 }
 
 .slider__next {
@@ -28,14 +32,10 @@
   @include linear-gradient(270deg);
 
   right: 0;
-}
 
-.slider__arrow--prev {
-  transform: rotate(0);
-}
-
-.slider__arrow--next {
-  transform: rotate(180deg);
+  &::before {
+    transform: scaleX(-1) translateX(50%) translateY(-50%);
+  }
 }
 
 .slider--nojs {

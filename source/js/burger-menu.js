@@ -1,5 +1,5 @@
 const menuMain = document.querySelector('.header-menu');
-const menuToggle = document.querySelector('.header-menu__toggle');
+const menuToggle = document.querySelector('.js-toggle-button');
 
 menuMain.classList.remove('header-menu--nojs');
 

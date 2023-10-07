@@ -35,53 +35,66 @@
   padding: 22px;
 }
 
+.header-nav__item--user .header-nav__link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  mask-image: url("/images/icons/stack.svg#user-icon");
+  background-color: $base-black;
+}
+
+.header-nav__item--union .header-nav__link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  mask-image: url("/images/icons/stack.svg#union-icon");
+  background-color: $base-black;
+}
+
 .header-nav__item--user .header-nav__link::after {
   @media (min-width: $desktop-width) {
     @include nav-item-text;
+
     content: "войти";
     width: 50px;
   }
 }
 
-.header-nav__item--union .header-nav__link {
+.header-nav__item--union .header-nav__link::after {
   @media (min-width: $desktop-width) {
-    &::after {
-      @include nav-item-text;
+    @include nav-item-text;
 
-      content: "корзина";
-      width: 70px;
-    }
+    content: "корзина";
+    width: 70px;
   }
 }
 
-.header-nav__link--user:hover .header-nav__image,
-.header-nav__link--user:focus .header-nav__image,
-.header-nav__link--user:active .header-nav__image {
-  color: $base-primary;
-}
-
-.header-nav__link--union:hover .header-nav__image,
-.header-nav__link--union:focus .header-nav__image,
-.header-nav__link--union:active .header-nav__image {
-  color: $base-primary;
-}
-
-.header-menu--opened .header-nav__image--closed {
-  & .header-nav__image--opened {
-    display: block;
-  }
-
-  & .header-nav__image--closed {
-    display: none;
+.header-nav__link:hover,
+.header-nav__link:focus,
+.header-nav__link:active {
+  &::before {
+    background-color: $base-primary;
   }
 }
 
-.header-menu--closed {
-  & .header-nav__image--opened {
-    display: none;
-  }
+// .header-menu--opened .header-nav__image--closed {
+//   & .header-nav__image--opened {
+//     display: block;
+//   }
 
-  & .header-nav__image--closed {
-    display: block;
-  }
-}
+//   & .header-nav__image--closed {
+//     display: none;
+//   }
+// }
+
+// .header-menu--closed {
+//   & .header-nav__image--opened {
+//     display: none;
+//   }
+
+//   & .header-nav__image--closed {
+//     display: block;
+//   }
+// }
