@@ -62,13 +62,12 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: 50px;
     column-gap: 14px; //Подгон
+    align-items: start;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 50px;
-    column-gap: 14px; //Подгон
   }
 }
 
