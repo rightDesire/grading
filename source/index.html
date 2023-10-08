@@ -9,15 +9,13 @@
   <body class="page__body">
     <header class="header" data-test="header">
       <div class="header__container container">
-        <div class="header__link-wrapper">
-          <a class="header__link link" href="index.html">
+          <a class="header__logo logo link" href="index.html">
             <picture>
               <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/content/logo-desktop.svg">
               <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/content/logo-tablet.svg">
-              <img class="header__image" width="32" height="36" src="images/content/logo-mobile.svg" alt="Логотип Drink2Go.">
+              <img class="logo__image" width="32" height="36" src="images/content/logo-mobile.svg" alt="Логотип Drink2Go.">
             </picture>
           </a>
-        </div>
         <nav class="header-nav">
           <div class="header-menu header-menu--nojs header-menu--closed">
             <button class="header-menu__toggle js-toggle-button" type="button" aria-label="Кнопка меню."></button>
@@ -184,7 +182,92 @@
       </section>
     </main>
     <footer class="footer">
-
+      <div class="footer__container container">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item footer__item--social">
+              <div class="footer__wrapper">
+                <a class="footer__logo logo link" href="index.html">
+                  <picture>
+                    <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/content/logo-desktop.svg">
+                    <img class="footer__image logo__image" width="82" height="36" src="images/content/logo-tablet.svg" alt="Логотип Drink2Go.">
+                  </picture>
+                </a>
+                <ul class="footer__social social">
+                  <li class="social__element">
+                    <a class="social__link link" href="#">
+                      <svg class="social__image" width="20" height="20">
+                        <use xlink:href="images/icons/stack.svg#vk-icon" aria-hidden="true"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__element">
+                    <a class="social__link link" href="#">
+                      <svg class="social__image" width="20" height="20">
+                        <use xlink:href="images/icons/stack.svg#pinterest-icon" aria-hidden="true"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__element">
+                    <a class="social__link link" href="#">
+                      <svg class="social__image" width="20" height="20">
+                        <use xlink:href="images/icons/stack.svg#ok-icon" aria-hidden="true"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="footer__item footer__item--menu">
+              <ul class="footer-menu">
+                <li class="footer-menu__element">
+                  <h3 class="footer-menu__title item-title">Интернет-магазин</h3>
+                </li>
+                <li class="footer-menu__element">
+                  <a class="footer-menu__link footer__link link" href="#">Каталог</a>
+                </li>
+                <li class="footer-menu__element">
+                  <a class="footer-menu__link footer__link link" href="#">Доставка</a>
+                </li>
+                <li class="footer-menu__element">
+                  <a class="footer-menu__link footer__link link" href="#">Способы оплаты</a>
+                </li>
+                <li class="footer-menu__element">
+                  <a class="footer-menu__link footer__link link" href="#">О нас</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__item footer__item--media">
+              <ul class="footer-media">
+                <li class="footer-media__element">
+                  <h3 class="footer-media__title item-title">Медиа</h3>
+                </li>
+                <li class="footer-media__element">
+                  <a class="footer-media__link footer__link link" href="#">Блог</a>
+                </li>
+                <li class="footer-media__element">
+                  <a class="footer-media__link footer__link link" href="#">Информация для СМИ</a>
+                </li>
+                <li class="footer-media__element">
+                  <a class="footer-media__link footer__link link" href="#">Правовая информация</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__item footer__item--contacts">
+              <address class="footer__contacts contacts">
+                <p class="contacts__title item-title">Контакты</p>
+                <span class="contacts__address">Санкт-Петербург, набережная реки Карповки, дом 5</span>
+                <a class="contacts__link link" href="tel:+79999999999">+7 (999) 999-99-99</a>
+              </address>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
+            Разработано в HTML Academy
+          </a>
+        </div>
+      </div>
     </footer>
     <script type="module" src="js/script.js"></script>
   </body>

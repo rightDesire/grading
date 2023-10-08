@@ -29,24 +29,32 @@
   width: 50px;
   height: 56px;
   background-image: url("/images/icons/stack.svg#feature-speed");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .feature--fit .feature__title::before {
   width: 52px;
   height: 56px;
   background-image: url("/images/icons/stack.svg#feature-fit");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .feature--energy .feature__title::before {
   width: 42px;
   height: 56px;
   background-image: url("/images/icons/stack.svg#feature-energy");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .feature--ecology .feature__title::before {
   width: 46px;
   height: 56px;
   background-image: url("/images/icons/stack.svg#feature-ecology");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .feature__description {

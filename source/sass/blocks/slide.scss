@@ -118,6 +118,7 @@
     margin-bottom: 16px;
     font-size: 56px;
     line-height: 80px;
+    letter-spacing: 1.12px;
     order: 2;
   }
 
@@ -169,7 +170,6 @@
 .slide__difference {
   display: flex;
   align-items: center;
-  column-gap: 6px;
   margin: 0;
   word-wrap: break-word;
 
@@ -179,7 +179,7 @@
 }
 
 .slide__old-price {
-  width: 40px;
+  width: 50px;
   color: $base-primary;
   font-size: 16px;
   font-weight: 400;

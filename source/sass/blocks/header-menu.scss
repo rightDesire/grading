@@ -31,6 +31,8 @@
     width: 16px;
     height: 12px;
     background-image: url("/images/icons/stack.svg#menu-closed");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 }
 
@@ -41,6 +43,8 @@
     width: 12px;
     height: 12px;
     background-image: url("/images/icons/stack.svg#menu-opened");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
   }
 }
 
@@ -50,12 +54,6 @@
 
 .header-menu__list {
   @include list-reset;
-
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0.24px;
-  text-transform: uppercase;
 
   z-index: 1000;
 
@@ -97,11 +95,9 @@
 .header-menu__link {
   @include style-header-link;
 
-  display: block;
   width: inherit;
   height: inherit;
   padding: 20px 10px;
-  font-weight: 500;
   word-wrap: break-word;
 
   @media (min-width: $tablet-width) {

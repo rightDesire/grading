@@ -1,9 +1,8 @@
 .header-nav {
   @include flex;
 
-  flex-grow: 1;
-
   @media (min-width: $tablet-width) {
+    flex-grow: 1;
     min-height: 80px;
   }
 }
@@ -47,6 +46,8 @@
   width: 16px;
   height: 16px;
   mask-image: url("/images/icons/stack.svg#user-icon");
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
   background-color: $base-black;
 }
 
@@ -56,6 +57,8 @@
   width: 16px;
   height: 16px;
   mask-image: url("/images/icons/stack.svg#union-icon");
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
   background-color: $base-black;
 }
 
