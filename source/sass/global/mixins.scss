@@ -121,6 +121,25 @@
   }
 }
 
+@mixin section-title {
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+@mixin section-sub-title {
+  max-width: 280px;
+  margin: 0 auto;
+  word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    max-width: 728px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1360px;
+  }
+}
+
 @mixin footer-padding {
   padding-bottom: 4px;
 

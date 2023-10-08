@@ -38,16 +38,8 @@
   }
 }
 
-.slider--nojs {
-  & .slider__prev {
-    display: none;
-  }
-
-  & .slider__next {
-    display: none;
-  }
-
-  & .slider__pagination {
-    display: none;
-  }
+.slider--nojs .slider__prev,
+.slider--nojs .slider__next,
+.slider--nojs .slider__pagination {
+  display: none;
 }

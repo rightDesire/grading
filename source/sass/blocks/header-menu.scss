@@ -53,8 +53,6 @@
 }
 
 .header-menu__list {
-  @include list-reset;
-
   z-index: 1000;
 
   @media (max-width: $mobile-width-only) {
@@ -85,10 +83,12 @@
   @media (max-width: $mobile-width-only) {
     min-width: 320px;
     border-bottom: 1px solid $base-secondary;
+  }
+}
 
-    &:first-child {
-      border-top: 1px solid $base-secondary;
-    }
+.header-menu__item:first-child {
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $base-secondary;
   }
 }
 

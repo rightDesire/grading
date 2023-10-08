@@ -1,0 +1,56 @@
+.sort {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 280px;
+  color: $base-black;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.sort__text {
+  margin: 0;
+  font-size: 16px;
+}
+
+.sort__select {
+  position: relative;
+  overflow: hidden;
+  width: 166px;
+  height: 32px;
+  padding: 4px 10px;
+  padding-right: 30px;
+  border-radius: 4px;
+  text-transform: lowercase;
+  color: $base-primary;
+  background-color: transparent;
+  border: none;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  appearance: none;
+  background: url("/images/icons/stack.svg#arrow-sort") no-repeat right;
+  background-size: 10px 6px;
+  background-position-x: calc(100% - 10px);
+
+  &:hover {
+    background-color: $base-secondary;
+  }
+
+  &:focus {
+    background-color: $base-secondary;
+    outline: none;
+  }
+
+  &:active {
+    background-image: url("/images/icons/stack.svg#arrow-sort-active"); //Получилось только с добавлением двух вариантов иконок
+  }
+}

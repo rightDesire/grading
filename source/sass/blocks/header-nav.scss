@@ -8,7 +8,6 @@
 }
 
 .header-nav__list {
-  @include list-reset;
   @include flex;
 
   @media (max-width: $mobile-width-only) {

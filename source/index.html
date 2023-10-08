@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
+    integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -19,7 +22,7 @@
         <nav class="header-nav">
           <div class="header-menu header-menu--nojs header-menu--closed">
             <button class="header-menu__toggle js-toggle-button" type="button" aria-label="Кнопка меню."></button>
-            <ul class="header-menu__list">
+            <ul class="header-menu__list list">
               <li class="header-menu__item">
                 <span class="header-menu__link link header-menu__link--current">главная</span>
               </li>
@@ -34,7 +37,7 @@
               </li>
             </ul>
           </div>
-          <ul class="header-nav__list">
+          <ul class="header-nav__list list">
             <li class="header-nav__item header-nav__item--user">
               <a class="header-nav__link link" href="#" aria-label="Личный кабинет.">
               </a>
@@ -78,7 +81,7 @@
                 <div class="slide__wrapper">
                   <p class="slide__difference">
                     <s class="slide__old-price">295₽</s>
-                    <span class="slide__price">225₽</span>
+                    <span class="slide__price price">225₽</span>
                   </p>
                   <button class="slide__order button">Заказать</button>
                 </div>
@@ -107,7 +110,7 @@
                 <div class="slide__wrapper">
                   <p class="slide__difference">
                     <s class="slide__old-price">285₽</s>
-                    <span class="slide__price">265₽</span>
+                    <span class="slide__price price">265₽</span>
                   </p>
                   <button class="slide__order button">Заказать</button>
                 </div>
@@ -136,7 +139,7 @@
                 <div class="slide__wrapper">
                   <p class="slide__difference">
                     <s class="slide__old-price">395₽</s>
-                    <span class="slide__price">375₽</span>
+                    <span class="slide__price price">375₽</span>
                   </p>
                   <button class="slide__order button">Заказать</button>
                 </div>
@@ -152,7 +155,7 @@
         <div class="features__container container">
           <h1 class="features__title title-h4">Преимущества</h1>
           <h2 class="features__sub-title title-h2">Главные причины выбрать Drink2Go</h2>
-          <ul class="features__list">
+          <ul class="features__list list">
             <li class="features__item feature feature--speed">
               <h3 class="feature__title title-h3">Скорость</h3>
               <p class="feature__description">
@@ -180,11 +183,132 @@
           </ul>
         </div>
       </section>
+      <section class="catalog" data-test="catalog">
+        <div class="catalog__container container">
+          <h1 class="catalog__title title-h4">Каталог</h1>
+          <h2 class="catalog__sub-title title-h2">Каталог кофейных напитков</h2>
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="post">
+            <ul class="catalog-filter__list list">
+              <li class="catalog-filter__item">
+                <h3 class="catalog-filter__title">Цена</h3>
+                <section class="range">
+                  <h2 class="visually-hidden">Range Slider</h2>
+                  <div class="range__slider">
+                    <div id="range"></div> <!-- элемент слайдера диапазона -->
+                  </div>
+                  <div class="range__values">
+                    <input id="min" name="min-price" type="text" value="0"/> <!-- меньшее установленное значение -->
+                    <input id="max" name="max-price" type="text" value="900"/> <!-- большее установленное значение -->
+                  </div>
+                </section>
+              </li>
+              <li class="catalog-filter__item">
+                <h3 class="catalog-filter__title">Наличие молока</h3>
+                <ul class="list-radio list-filter list">
+                  <li class="list-radio__item">
+                    <label class="list-radio__label">
+                      <input class="list-radio__input" type="radio" value="any" name="variety-milk" checked>
+                      <span class="list-radio__text">Неважно</span>
+                    </label>
+                  </li>
+                  <li class="list-radio__item">
+                    <label class="list-radio__label">
+                      <input class="list-radio__input" type="radio" value="animals" name="variety-milk">
+                      <span class="list-radio__text">Только животное</span>
+                    </label>
+                  </li>
+                  <li class="list-radio__item">
+                    <label class="list-radio__label">
+                      <input class="list-radio__input" type="radio" value="vegetation" name="variety-milk">
+                      <span class="list-radio__text">Только растительное</span>
+                    </label>
+                  </li>
+                  <li class="list-radio__item">
+                    <label class="list-radio__label">
+                      <input class="list-radio__input" type="radio" value="no-milk" name="variety-milk" disabled>
+                      <span class="list-radio__text">Без молока</span>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog-filter__item">
+                <h3 class="catalog-filter__title">Страна произрастания</h3>
+                <ul class="list-checkbox list-filter list">
+                  <li class="list-checkbox__item">
+                    <div class="toggle">
+                      <input class="toggle__input" type="checkbox" id="brazil" name="brazil" checked>
+                      <label class="toggle__label" for="brazil"></label>
+                      <span class="toggle__text">Бразилия</span>
+                    </div>
+                  </li>
+                  <li class="list-checkbox__item">
+                    <div class="toggle">
+                      <input class="toggle__input" type="checkbox" id="ethiopia" name="ethiopia">
+                      <label class="toggle__label" for="ethiopia"></label>
+                      <span class="toggle__text">Эфиопия</span>
+                    </div>
+                  </li>
+                  <li class="list-checkbox__item">
+                    <div class="toggle">
+                      <input class="toggle__input" type="checkbox" id="columbia" name="columbia">
+                      <label class="toggle__label" for="columbia"></label>
+                      <span class="toggle__text">Колумбия</span>
+                    </div>
+                  </li>
+                  <li class="list-checkbox__item">
+                    <div class="toggle">
+                      <input class="toggle__input" type="checkbox" id="costa-rica" name="costa-rica">
+                      <label class="toggle__label" for="costa-rica"></label>
+                      <span class="toggle__text">Коста-Рика</span>
+                    </div>
+                  </li>
+                  <li class="list-checkbox__item">
+                    <div class="toggle">
+                      <input class="toggle__input" type="checkbox" id="peru" name="peru" disabled>
+                      <label class="toggle__label" for="peru"></label>
+                      <span class="toggle__text">Перу</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="catalog-filter__wrapper">
+              <button class="catalog-filter__button catalog-filter__button--submit button" type="submit">Применить</button>
+              <button class="catalog-filter__button catalog-filter__button--reset button" type="reset">Сбросить</button>
+            </div>
+          </form>
+          <div class="catalog__wrapper">
+            <div class="catalog__sort sort">
+              <span class="sort__text">Сортировка: </span>
+              <select class="sort__select" name="sort" id="sort">
+                <option value="default">По умолчанию</option>
+              </select>
+            </div>
+            <ul class="catalog__list list">
+              <li class="card">
+                <picture>
+                  <img class="card__image" src="images/content/decaf-card-mobile@1x.png" srcset="images/content/decaf-card-mobile@2x.png @2x" width="130" height="188" alt="Декаф Флэт Уайт">
+                </picture>
+                <div class="card__container">
+                  <h3 class="card__title">Декаф Флэт Уайт</h3>
+                  <p class="card__description">
+                    Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                  </p>
+                </div>
+                <div class="card__wrapper">
+                  <span class="card__price price">225₽</span>
+                  <button class="card__button button">В корзину</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-test="footer">
       <div class="footer__container container">
         <nav class="footer__nav">
-          <ul class="footer__list">
+          <ul class="footer__list list">
             <li class="footer__item footer__item--social">
               <div class="footer__wrapper">
                 <a class="footer__logo logo link" href="index.html">
@@ -269,6 +393,9 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"
+    integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="js/script.js"></script>
   </body>
 </html>
