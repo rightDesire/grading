@@ -1,7 +1,6 @@
-.toggle {
-  display: flex;
-  align-items: center;
+.toggle__wrapper {
   position: relative;
+  width: 42px;
   height: 24px;
 }
 
@@ -81,7 +80,9 @@
 }
 
 .toggle__text {
-  margin-left: 52px;
+  max-width: 228px;
+  padding-right: 5px;
+  word-wrap: break-word;
 }
 
 .toggle__input:disabled ~ .toggle__text {

@@ -8,11 +8,19 @@
   color: $base-black;
   background-color: $base-white;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+  }
 }
 
 .card__image {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 40px;
+  }
 }
 
 .card__title {
@@ -23,6 +31,10 @@
   font-weight: 700;
   line-height: 32px;
   word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    max-width: 310px; //Переделать
+  }
 }
 
 .card__description {
@@ -33,6 +45,10 @@
   font-weight: 400;
   line-height: 20px;
   word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    max-width: 310px; //Переделать
+  }
 }
 
 .card__wrapper {

@@ -3,13 +3,14 @@
 }
 
 .list-radio__label {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: start;
   column-gap: 10px;
 }
 
 .list-radio__input {
-  position: relative;
+  position: absolute;
   width: 24px;
   height: 24px;
   margin: 0;
@@ -79,5 +80,8 @@
 }
 
 .list-radio__text {
-
+  max-width: 280px;
+  padding-right: 5px;
+  padding-left: 34px;
+  word-wrap: break-word;
 }

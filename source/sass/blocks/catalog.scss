@@ -4,7 +4,7 @@
 
 .catalog__container {
   padding-top: 50px;
-  padding-bottom: 4px;
+  // padding-bottom: 4px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -34,4 +34,17 @@
 
 .catalog__sort {
   margin-bottom: 16px;
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 30px;
+  row-gap: 20px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 70px;
+  }
 }

@@ -15,8 +15,10 @@
 }
 
 .sort__text {
+  max-width: 110px;
   margin: 0;
   font-size: 16px;
+  word-wrap: break-word;
 }
 
 .sort__select {
