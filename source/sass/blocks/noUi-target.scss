@@ -5,23 +5,3 @@
   border: none;
   box-shadow: none;
 }
-
-.noUi-target:disabled .noUi-connect {
-  background: $base-grey;
-}
-
-.noUi-target:disabled .noUi-handle {
-  border-color: $base-grey;
-}
-
-.noUi-target:disabled .noUi-handle:hover {
-  &::before {
-    display: none;
-  }
-}
-
-.noUi-target:disabled .noUi-handle:active {
-  &::before {
-    display: none;
-  }
-}

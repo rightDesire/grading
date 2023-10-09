@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
     integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -54,8 +54,8 @@
       <section class="hero" data-test="hero">
         <h1 class="visually-hidden">Новинки!</h1>
         <div class="slider slider--nojs">
-          <button class="slider__prev slider-button-prev" aria-label="Посмотреть предыдущий слайд."></button>
-          <button class="slider__next slider-button-next" aria-label="Посмотреть следующий слайд.">
+          <button class="slider__prev slider-button-prev" type="button" aria-label="Посмотреть предыдущий слайд."></button>
+          <button class="slider__next slider-button-next" type="button" aria-label="Посмотреть следующий слайд.">
           </button>
           <div class="slide slide--decaf">
             <div class="slide__container container">
@@ -63,7 +63,7 @@
                 <picture>
                   <source media="(min-width: 1440px)" type="image/webp" srcset="images/content/decaf-desktop@1x.webp 1x, images/content/decaf-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="images/content/decaf-tablet@1x.webp 1x, images/content/decaf-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="images/content/decaf-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="images/content/decaf-mobile@1x.webp 1x, images/content/decaf-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1440px)" srcset="images/content/decaf-desktop@1x.png 1x, images/content/decaf-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="images/content/decaf-tablet@1x.png 1x, images/content/decaf-tablet@2x.png 2x">
@@ -83,7 +83,7 @@
                     <s class="slide__old-price">295₽</s>
                     <span class="slide__price price">225₽</span>
                   </p>
-                  <button class="slide__order button">Заказать</button>
+                  <button class="slide__order button" type="button">Заказать</button>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@
                 <picture>
                   <source media="(min-width: 1440px)" type="image/webp" srcset="images/content/latte-desktop@1x.webp 1x, images/content/latte-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="images/content/latte-tablet@1x.webp 1x, images/content/latte-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="images/content/latte-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="images/content/latte-mobile@1x.webp 1x, images/content/latte-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1440px)" srcset="images/content/latte-desktop@1x.png 1x, images/content/latte-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="images/content/latte-tablet@1x.png 1x, images/content/latte-tablet@2x.png 2x">
@@ -112,7 +112,7 @@
                     <s class="slide__old-price">285₽</s>
                     <span class="slide__price price">265₽</span>
                   </p>
-                  <button class="slide__order button">Заказать</button>
+                  <button class="slide__order button" type="button">Заказать</button>
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@
                 <picture>
                   <source media="(min-width: 1440px)" type="image/webp" srcset="images/content/expresso-desktop@1x.webp 1x, images/content/expresso-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="images/content/expresso-tablet@1x.webp 1x, images/content/expresso-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="images/content/expresso-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="images/content/expresso-mobile@1x.webp 1x, images/content/expresso-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1440px)" srcset="images/content/expresso-desktop@1x.png 1x, images/content/expresso-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="images/content/expresso-tablet@1x.png 1x, images/content/expresso-tablet@2x.png 2x">
@@ -141,12 +141,12 @@
                     <s class="slide__old-price">395₽</s>
                     <span class="slide__price price">375₽</span>
                   </p>
-                  <button class="slide__order button">Заказать</button>
+                  <button class="slide__order button" type="button">Заказать</button>
                 </div>
               </div>
             </div>
           </div>
-          <ul class="slider__pagination slider-pagination" aria-label="Пагинация слайдера.">
+          <ul class="slider__pagination slider-pagination">
 
           </ul>
         </div>
@@ -195,11 +195,11 @@
                   <section class="range">
                     <h2 class="visually-hidden">Range Slider</h2>
                     <div class="range__slider">
-                      <div id="range"></div> <!-- элемент слайдера диапазона -->
+                      <div id="range"></div>
                     </div>
                     <div class="range__values">
-                      <input id="min" name="min-price" type="text" value="0"/> <!-- меньшее установленное значение -->
-                      <input id="max" name="max-price" type="text" value="900"/> <!-- большее установленное значение -->
+                      <input id="min" name="min-price" type="text" value="0">
+                      <input id="max" name="max-price" type="text" value="900">
                     </div>
                   </section>
                 </li>
@@ -238,37 +238,42 @@
                     <li class="list-checkbox__item toggle">
                       <div class="toggle__wrapper">
                         <input class="toggle__input" type="checkbox" id="brazil" name="brazil" checked>
-                        <label class="toggle__label" for="brazil"></label>
+                        <label class="toggle__label" for="brazil">
+                          <span class="toggle__text">Бразилия</span>
+                        </label>
                       </div>
-                      <span class="toggle__text">Бразилия</span>
                     </li>
                     <li class="list-checkbox__item toggle">
                       <div class="toggle__wrapper">
                         <input class="toggle__input" type="checkbox" id="ethiopia" name="ethiopia">
-                        <label class="toggle__label" for="ethiopia"></label>
+                        <label class="toggle__label" for="ethiopia">
+                          <span class="toggle__text">Эфиопия</span>
+                        </label>
                       </div>
-                      <span class="toggle__text">Эфиопия</span>
                     </li>
                     <li class="list-checkbox__item toggle">
                       <div class="toggle__wrapper">
                         <input class="toggle__input" type="checkbox" id="columbia" name="columbia">
-                        <label class="toggle__label" for="columbia"></label>
+                        <label class="toggle__label" for="columbia">
+                          <span class="toggle__text">Колумбия</span>
+                        </label>
                       </div>
-                      <span class="toggle__text">Колумбия</span>
                     </li>
                     <li class="list-checkbox__item toggle">
                       <div class="toggle__wrapper">
                         <input class="toggle__input" type="checkbox" id="costa-rica" name="costa-rica">
-                        <label class="toggle__label" for="costa-rica"></label>
+                        <label class="toggle__label" for="costa-rica">
+                          <span class="toggle__text">Коста-Рика</span>
+                        </label>
                       </div>
-                      <span class="toggle__text">Коста-Рика</span>
                     </li>
                     <li class="list-checkbox__item toggle">
                       <div class="toggle__wrapper">
                         <input class="toggle__input" type="checkbox" id="peru" name="peru" disabled>
-                        <label class="toggle__label" for="peru"></label>
+                        <label class="toggle__label" for="peru">
+                          <span class="toggle__text">Перу</span>
+                        </label>
                       </div>
-                      <span class="toggle__text">Перу</span>
                     </li>
                   </ul>
                 </li>
@@ -288,7 +293,9 @@
               <ul class="catalog__list list">
                 <li class="card">
                   <picture>
-                    <img class="card__image" src="images/content/decaf-card-mobile@1x.png" srcset="images/content/decaf-card-mobile@2x.png @2x" width="130" height="188" alt="Декаф Флэт Уайт">
+                    <source type="image/webp" srcset="images/content/decaf-card@1x.png 1x, images/content/decaf-card@2x.png 2x">
+
+                    <img class="card__image" src="images/content/decaf-card@1x.png" srcset="images/content/decaf-card@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт">
                   </picture>
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -298,12 +305,14 @@
                   </div>
                   <div class="card__wrapper">
                     <span class="card__price price">225₽</span>
-                    <button class="card__button button">В корзину</button>
+                    <button class="card__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="card">
                   <picture>
-                    <img class="card__image" src="images/content/decaf-card-mobile@1x.png" srcset="images/content/decaf-card-mobile@2x.png @2x" width="130" height="188" alt="Декаф Флэт Уайт">
+                    <source type="image/webp" srcset="images/content/decaf-card@1x.png 1x, images/content/decaf-card@2x.png 2x">
+
+                    <img class="card__image" src="images/content/decaf-card@1x.png" srcset="images/content/decaf-card@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт">
                   </picture>
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -313,12 +322,14 @@
                   </div>
                   <div class="card__wrapper">
                     <span class="card__price price">225₽</span>
-                    <button class="card__button button">В корзину</button>
+                    <button class="card__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="card">
                   <picture>
-                    <img class="card__image" src="images/content/decaf-card-mobile@1x.png" srcset="images/content/decaf-card-mobile@2x.png @2x" width="130" height="188" alt="Декаф Флэт Уайт">
+                    <source type="image/webp" srcset="images/content/decaf-card@1x.png 1x, images/content/decaf-card@2x.png 2x">
+
+                    <img class="card__image" src="images/content/decaf-card@1x.png" srcset="images/content/decaf-card@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт">
                   </picture>
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -328,12 +339,14 @@
                   </div>
                   <div class="card__wrapper">
                     <span class="card__price price">225₽</span>
-                    <button class="card__button button">В корзину</button>
+                    <button class="card__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="card">
                   <picture>
-                    <img class="card__image" src="images/content/decaf-card-mobile@1x.png" srcset="images/content/decaf-card-mobile@2x.png @2x" width="130" height="188" alt="Декаф Флэт Уайт">
+                    <source type="image/webp" srcset="images/content/decaf-card@1x.png 1x, images/content/decaf-card@2x.png 2x">
+
+                    <img class="card__image" src="images/content/decaf-card@1x.png" srcset="images/content/decaf-card@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт">
                   </picture>
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -343,12 +356,14 @@
                   </div>
                   <div class="card__wrapper">
                     <span class="card__price price">225₽</span>
-                    <button class="card__button button">В корзину</button>
+                    <button class="card__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="card">
                   <picture>
-                    <img class="card__image" src="images/content/decaf-card-mobile@1x.png" srcset="images/content/decaf-card-mobile@2x.png @2x" width="130" height="188" alt="Декаф Флэт Уайт">
+                    <source type="image/webp" srcset="images/content/decaf-card@1x.png 1x, images/content/decaf-card@2x.png 2x">
+
+                    <img class="card__image" src="images/content/decaf-card@1x.png" srcset="images/content/decaf-card@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт">
                   </picture>
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -358,12 +373,14 @@
                   </div>
                   <div class="card__wrapper">
                     <span class="card__price price">225₽</span>
-                    <button class="card__button button">В корзину</button>
+                    <button class="card__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="card">
                   <picture>
-                    <img class="card__image" src="images/content/decaf-card-mobile@1x.png" srcset="images/content/decaf-card-mobile@2x.png @2x" width="130" height="188" alt="Декаф Флэт Уайт">
+                    <source type="image/webp" srcset="images/content/decaf-card@1x.png 1x, images/content/decaf-card@2x.png 2x">
+
+                    <img class="card__image" src="images/content/decaf-card@1x.png" srcset="images/content/decaf-card@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт">
                   </picture>
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -373,25 +390,25 @@
                   </div>
                   <div class="card__wrapper">
                     <span class="card__price price">225₽</span>
-                    <button class="card__button button">В корзину</button>
+                    <button class="card__button button" type="button">В корзину</button>
                   </div>
                 </li>
               </ul>
-              <ul class="pagination list">
-                <button class="pagination__button pagination__button--prev"><span>&lt</span></button>
-                <div class="pagination__wrapper">
+              <div class="pagination">
+                <button class="pagination__button pagination__button--prev" type="button" style="display: block;"><span>&lt;</span></button>
+                <ul class="pagination__list list">
                   <li class="pagination__item">
-                    <button class="pagination__button">1</butto>
+                    <button class="pagination__button" type="button">1</button>
                   </li>
                   <li class="pagination__item">
-                    <button class="pagination__button pagination__button--current">2</button>
+                    <button class="pagination__button pagination__button--current" type="button" tabindex="-1">2</button>
                   </li>
                   <li class="pagination__item">
-                    <button class="pagination__button">3</button>
+                    <button class="pagination__button" type="button">3</button>
                   </li>
-                </div>
-                <button class="pagination__button pagination__button--next"><span>&gt</span></button>
-              </ul>
+                </ul>
+                <button class="pagination__button pagination__button--next" type="button" style="display: block;"><span>&gt;</span></button>
+              </div>
             </div>
           </div>
         </div>
@@ -399,7 +416,7 @@
       <picture>
         <source media="(min-width: 1440px)" type="image/webp" srcset="images/content/map-desktop@1x.webp 1x, images/content/map-desktop@2x.webp 2x">
           <source media="(min-width: 768px)" type="image/webp" srcset="images/content/map-tablet@1x.webp 1x, images/content/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="images/content/map-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="images/content/map-mobile@1x.webp 1x, images/content/map-mobile@2x.webp 2x">
 
           <source media="(min-width: 1440px)" srcset="images/content/map-desktop@1x.png 1x, images/content/map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="images/content/map-tablet@1x.png 1x, images/content/map-tablet@2x.png 2x">
@@ -421,6 +438,7 @@
                 <ul class="footer__social social">
                   <li class="social__element">
                     <a class="social__link link" href="#">
+                      <span class="visually-hidden">Вконтакте</span>
                       <svg class="social__image" width="20" height="20">
                         <use xlink:href="images/icons/stack.svg#vk-icon" aria-hidden="true"></use>
                       </svg>
@@ -428,6 +446,7 @@
                   </li>
                   <li class="social__element">
                     <a class="social__link link" href="#">
+                      <span class="visually-hidden">Пинтерест</span>
                       <svg class="social__image" width="20" height="20">
                         <use xlink:href="images/icons/stack.svg#pinterest-icon" aria-hidden="true"></use>
                       </svg>
@@ -435,6 +454,7 @@
                   </li>
                   <li class="social__element">
                     <a class="social__link link" href="#">
+                      <span class="visually-hidden">Одноклассник</span>
                       <svg class="social__image" width="20" height="20">
                         <use xlink:href="images/icons/stack.svg#ok-icon" aria-hidden="true"></use>
                       </svg>

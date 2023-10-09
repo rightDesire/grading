@@ -29,7 +29,7 @@
 }
 
 .header-nav__link {
-  @include style-header-link;
+  @include style-menu-link;
 
   display: flex;
   width: inherit;

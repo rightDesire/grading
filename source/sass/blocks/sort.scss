@@ -6,12 +6,11 @@
   gap: 8px;
   width: 280px;
   color: $base-black;
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
-  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     margin-left: auto;
@@ -35,17 +34,20 @@
   border-radius: 4px;
   text-transform: lowercase;
   color: $base-primary;
-  background-color: transparent;
   border: none;
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
   appearance: none;
-  background: url("/images/icons/stack.svg#arrow-sort") no-repeat right;
+  background-image: url("/images/icons/stack.svg#arrow-sort");
+  background-repeat: no-repeat;
+  background-position: right;
   background-size: 10px 6px;
   background-position-x: calc(100% - 10px);
+  background-color: transparent;
+  cursor: pointer;
 
   &:hover {
     background-color: $base-secondary;

@@ -29,14 +29,16 @@
   word-wrap: break-word;
 }
 
-@mixin style-header-link {
+@mixin style-menu-link {
+  color: $base-black;
+
   &:hover,
   &:focus {
     outline: none;
     color: $base-primary;
   }
 
-  &:active:not(.header-menu__link--current) {
+  &:active {
     background-color: $base-secondary;
   }
 }
@@ -160,4 +162,17 @@
   &:last-child {
     padding-bottom: 0;
   }
+}
+
+@mixin contacts-icon {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform: translateY(16%); //Подгон
 }

@@ -1,3 +1,7 @@
+.toggle {
+  position: relative;
+}
+
 .toggle__wrapper {
   position: relative;
   width: 42px;
@@ -17,7 +21,6 @@
   background-color: $base-grey;
   border-radius: 12px;
   cursor: pointer;
-  // transition: background-color 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,14 +68,7 @@
   outline: none;
 }
 
-.toggle__input:hover:checked + .toggle__label,
-.toggle__input:focus:checked + .toggle__label {
-  box-shadow: none;
-  background-color: $base-primary;
-  outline: none;
-}
-
-.toggle__input:disabled:hover + .toggle__label
+.toggle__input:disabled:hover + .toggle__label,
 .toggle__input:disabled:focus + .toggle__label {
   box-shadow: none;
   background-color: $light-grey;
@@ -80,11 +76,15 @@
 }
 
 .toggle__text {
+  position: absolute;
+  top: 0;
+  left: 52px;
   max-width: 228px;
+  min-width: 100px;
   padding-right: 5px;
   word-wrap: break-word;
 }
 
-.toggle__input:disabled ~ .toggle__text {
+.toggle__input:disabled + .toggle__label > .toggle__text {
   color: $base-grey;
 }

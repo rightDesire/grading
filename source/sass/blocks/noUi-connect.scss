@@ -1,3 +1,7 @@
 .noUi-connect { //Переопределение стилей
   background: $primary-lighter;
 }
+
+[disabled] .noUi-connect {
+  background: $base-grey;
+}

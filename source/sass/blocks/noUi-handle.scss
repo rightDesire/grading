@@ -15,7 +15,7 @@
 .noUi-handle:hover,
 .noUi-handle:focus {
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,7 +36,7 @@
   border: 2px solid $base-primary;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -51,4 +51,26 @@
 
 .noUi-handle-lower {
   right: -10px !important;
+}
+
+[disabled] .noUi-handle {
+  border-color: $base-grey;
+}
+
+[disabled] .noUi-handle:hover {
+  &::before {
+    display: none;
+  }
+}
+
+[disabled] .noUi-handle:focus {
+  &::before {
+    display: none;
+  }
+}
+
+[disabled] .noUi-handle:active {
+  &::before {
+    display: none;
+  }
 }

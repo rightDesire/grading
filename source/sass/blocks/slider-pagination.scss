@@ -19,6 +19,15 @@
   border: none;
   border-radius: unset;
   background-color: $base-white;
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $primary-opacity;
+  }
 }
 
 .slider-pagination__item .slider-pagination__link {

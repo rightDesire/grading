@@ -41,6 +41,10 @@
 
 .catalog__sort {
   margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 18px; //Подгон
+  }
 }
 
 .catalog__list {
@@ -58,5 +62,6 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 60px; //Подгон
   }
 }
