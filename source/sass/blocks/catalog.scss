@@ -16,6 +16,13 @@
   }
 }
 
+.catalog__flex-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 30px;
+  }
+}
+
 .catalog__title {
   @include section-title;
 
@@ -44,7 +51,12 @@
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 1fr;
-    padding-bottom: 70px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 64px;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -1,0 +1,77 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 44px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 395px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 120px;
+  }
+}
+
+.pagination__wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.pagination__button {
+  width: 40px;
+  min-height: 40px;
+  padding: 0;
+  color: $base-primary;
+  border: 0;
+  border-radius: 4px;
+  background-color: $base-white;
+  word-wrap: break-word;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  &--prev,
+  &--next {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      font-size: 0;
+    }
+  }
+
+  &--prev {
+    @media (min-width: $tablet-width) {
+      width: 91px;
+    }
+  }
+
+  &--next {
+    @media (min-width: $tablet-width) {
+      width: 104px;
+    }
+  }
+
+  &--current {
+    color: $base-black;
+    background-color: transparent;
+  }
+}
+
+.pagination__button--prev span::before {
+  @media (min-width: $tablet-width) {
+    @include pagintation-span;
+
+    content: "Назад";
+  }
+}
+
+.pagination__button--next span::before {
+  @media (min-width: $tablet-width) {
+    @include pagintation-span;
+
+    content: "Вперёд";
+  }
+}
