@@ -91,25 +91,43 @@
   }
 
   &--menu {
+    max-width: 280px;
     grid-area: menu;
 
+    @media (min-width: $tablet-width) {
+      max-width: 222px;
+    }
+
     @media (min-width: $desktop-width) {
+      max-width: 316px;
       margin-top: 6px;
     }
   }
 
   &--media {
+    max-width: 280px;
     grid-area: media;
 
+    @media (min-width: $tablet-width) {
+      max-width: 222px;
+    }
+
     @media (min-width: $desktop-width) {
+      max-width: 316px;
       margin-top: 6px;
     }
   }
 
   &--contacts {
+    max-width: 280px;
     grid-area: contacts;
 
+    @media (min-width: $tablet-width) {
+      max-width: 222px;
+    }
+
     @media (min-width: $desktop-width) {
+      max-width: 316px;
       margin-top: 6px;
     }
   }
