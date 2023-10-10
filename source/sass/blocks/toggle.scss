@@ -82,7 +82,7 @@
   max-width: 228px;
   min-width: 100px;
   max-height: 24px;
-  overflow-y: scroll; //По-другому не получилось
+  overflow-y: hidden; //По-другому не получилось
   padding-right: 5px;
   word-wrap: break-word;
 }
