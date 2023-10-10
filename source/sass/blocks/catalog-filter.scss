@@ -56,11 +56,14 @@
   gap: 20px;
 
   @media (min-width: $tablet-width) {
+    width: 38%;
+    margin: 0 auto;
     justify-content: center;
     flex-direction: row;
   }
 
   @media (min-width: $desktop-width) {
+    width: auto;
     margin-top: 40px;
   }
 }
@@ -90,16 +93,16 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    width: 280px;
+    width: 100%;
   }
 
   @media (min-width: $tablet-width) {
     &--submit {
-      width: 138px;
+      width: 50%;
     }
 
     &--reset {
-      width: 120px;
+      width: 44%;
     }
   }
 
