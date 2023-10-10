@@ -8,4 +8,8 @@
   line-height: 20px;
   letter-spacing: 0.28px;
   word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 8px; //Подгон
+  }
 }

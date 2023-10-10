@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
-    integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
@@ -65,8 +63,8 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="images/content/decaf-tablet@1x.webp 1x, images/content/decaf-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="images/content/decaf-mobile@1x.webp 1x, images/content/decaf-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)" srcset="images/content/decaf-desktop@1x.png 1x, images/content/decaf-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="images/content/decaf-tablet@1x.png 1x, images/content/decaf-tablet@2x.png 2x">
+                  <source media="(min-width: 1440px)" type="image/png" srcset="images/content/decaf-desktop@1x.png 1x, images/content/decaf-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" srcset="images/content/decaf-tablet@1x.png 1x, images/content/decaf-tablet@2x.png 2x">
                   <img class="slide__image" src="images/content/decaf-mobile@1x.png" srcset="images/content/decaf-mobile@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт.">
                 </picture>
               </div>
@@ -96,8 +94,8 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="images/content/latte-tablet@1x.webp 1x, images/content/latte-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="images/content/latte-mobile@1x.webp 1x, images/content/latte-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)" srcset="images/content/latte-desktop@1x.png 1x, images/content/latte-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="images/content/latte-tablet@1x.png 1x, images/content/latte-tablet@2x.png 2x">
+                  <source media="(min-width: 1440px)" type="image/png" srcset="images/content/latte-desktop@1x.png 1x, images/content/latte-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" srcset="images/content/latte-tablet@1x.png 1x, images/content/latte-tablet@2x.png 2x">
                   <img class="slide__image" src="images/content/latte-mobile@1x.png" srcset="images/content/latte-mobile@2x.png 2x" width="280" height="280" alt="Лавандовый Латте.">
                 </picture>
               </div>
@@ -125,8 +123,8 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="images/content/expresso-tablet@1x.webp 1x, images/content/expresso-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="images/content/expresso-mobile@1x.webp 1x, images/content/expresso-mobile@2x.webp 2x">
 
-                  <source media="(min-width: 1440px)" srcset="images/content/expresso-desktop@1x.png 1x, images/content/expresso-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="images/content/expresso-tablet@1x.png 1x, images/content/expresso-tablet@2x.png 2x">
+                  <source media="(min-width: 1440px)" type="image/png" srcset="images/content/expresso-desktop@1x.png 1x, images/content/expresso-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/png" srcset="images/content/expresso-tablet@1x.png 1x, images/content/expresso-tablet@2x.png 2x">
                   <img class="slide__image" src="images/content/expresso-mobile@1x.png" srcset="images/content/expresso-mobile@2x.png 2x" width="280" height="280" alt="Тройной Эспрессо.">
                 </picture>
               </div>
@@ -198,6 +196,8 @@
                       <div id="range"></div>
                     </div>
                     <div class="range__values">
+                      <label for="min"></label>
+                      <label for="max"></label>
                       <input id="min" name="min-price" type="text" value="0">
                       <input id="max" name="max-price" type="text" value="900">
                     </div>
@@ -300,7 +300,7 @@
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">
-                      Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                      Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком
                     </p>
                   </div>
                   <div class="card__wrapper">
@@ -317,7 +317,7 @@
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">
-                      Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                      Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком
                     </p>
                   </div>
                   <div class="card__wrapper">
@@ -334,7 +334,7 @@
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">
-                      Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                      Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком
                     </p>
                   </div>
                   <div class="card__wrapper">
@@ -351,7 +351,7 @@
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">
-                      Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                      Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком
                     </p>
                   </div>
                   <div class="card__wrapper">
@@ -368,7 +368,7 @@
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">
-                      Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                      Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком
                     </p>
                   </div>
                   <div class="card__wrapper">
@@ -385,7 +385,7 @@
                   <div class="card__container">
                     <h3 class="card__title">Декаф Флэт Уайт</h3>
                     <p class="card__description">
-                      Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                      Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком
                     </p>
                   </div>
                   <div class="card__wrapper">
@@ -413,15 +413,17 @@
           </div>
         </div>
       </section>
-      <picture>
-        <source media="(min-width: 1440px)" type="image/webp" srcset="images/content/map-desktop@1x.webp 1x, images/content/map-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" type="image/webp" srcset="images/content/map-tablet@1x.webp 1x, images/content/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="images/content/map-mobile@1x.webp 1x, images/content/map-mobile@2x.webp 2x">
+      <div class="map" data-test="map">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/webp" srcset="images/content/map-desktop@1x.webp 1x, images/content/map-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="images/content/map-tablet@1x.webp 1x, images/content/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="images/content/map-mobile@1x.webp 1x, images/content/map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1440px)" srcset="images/content/map-desktop@1x.png 1x, images/content/map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="images/content/map-tablet@1x.png 1x, images/content/map-tablet@2x.png 2x">
-          <img class="map" src="images/content/map-mobile@1x.png" srcset="images/content/map-mobile@2x.png 2x" width="320" height="420" alt="Тройной Эспрессо.">
-      </picture>
+            <source media="(min-width: 1440px)" type="image/png" srcset="images/content/map-desktop@1x.png 1x, images/content/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" type="image/png" srcset="images/content/map-tablet@1x.png 1x, images/content/map-tablet@2x.png 2x">
+            <img class="map__image" src="images/content/map-mobile@1x.png" srcset="images/content/map-mobile@2x.png 2x" width="320" height="420" alt="Санкт-Петербург, набережная реки Карповки, дом 5.">
+        </picture>
+      </div>
     </main>
     <footer class="footer" data-test="footer">
       <div class="footer__container container">
@@ -514,9 +516,7 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"
-    integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="vendor/nouislider/nouislider.js"></script>
     <script type="module" src="js/script.js"></script>
   </body>
 </html>

@@ -1,7 +1,8 @@
 .noUi-handle { //Переопределение стилей
-  top: -11px !important;
-  width: 24px !important;
-  height: 24px !important;
+  top: -11px;
+  right: -17px;
+  width: 24px;
+  height: 24px;
   border: 2px solid $primary-lighter;
   border-radius: 50%;
   box-shadow: none;
@@ -50,7 +51,7 @@
 }
 
 .noUi-handle-lower {
-  right: -10px !important;
+  right: -10px;
 }
 
 [disabled] .noUi-handle {

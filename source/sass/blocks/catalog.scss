@@ -43,7 +43,7 @@
   margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 18px; //Подгон
+    margin-bottom: 24px; //Подгон
   }
 }
 
@@ -56,7 +56,7 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 64px;
+    padding-bottom: 70px;
     gap: 30px;
   }
 

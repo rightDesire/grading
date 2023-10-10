@@ -6,6 +6,10 @@
   @media (min-width: $tablet-width) {
     margin-top: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
 }
 
 .copyright__link {

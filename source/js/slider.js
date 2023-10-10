@@ -1,11 +1,11 @@
-const slider = document.querySelector('.slider')
-const nextButton = document.querySelector('.slider-button-next')
-const prevButton = document.querySelector('.slider-button-prev')
-const slides = Array.from(document.querySelectorAll('.slide'))
-const pagination = document.querySelector('.slider-pagination')
+const slider = document.querySelector('.slider');
+const nextButton = document.querySelector('.slider-button-next');
+const prevButton = document.querySelector('.slider-button-prev');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const pagination = document.querySelector('.slider-pagination');
 let currentIndex = 0;
 
-slider.classList.remove('slider--nojs')
+slider.classList.remove('slider--nojs');
 
 // Создаем кнопки пагинации
 slides.forEach((slide, index) => {

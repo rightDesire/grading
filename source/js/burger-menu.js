@@ -3,7 +3,7 @@ const menuToggle = document.querySelector('.js-toggle-button');
 
 menuMain.classList.remove('header-menu--nojs');
 
-menuToggle.addEventListener('click', function () {
+const menuToggleSwitch = () => {
   if (menuMain.classList.contains('header-menu--closed')) {
     menuMain.classList.remove('header-menu--closed');
     menuMain.classList.add('header-menu--opened');
@@ -11,4 +11,6 @@ menuToggle.addEventListener('click', function () {
     menuMain.classList.add('header-menu--closed');
     menuMain.classList.remove('header-menu--opened');
   }
-});
+};
+
+menuToggle.addEventListener('click', menuToggleSwitch);

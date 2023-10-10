@@ -92,14 +92,26 @@
 
   &--menu {
     grid-area: menu;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 6px;
+    }
   }
 
   &--media {
     grid-area: media;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 6px;
+    }
   }
 
   &--contacts {
     grid-area: contacts;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 6px;
+    }
   }
 }
 
@@ -114,6 +126,10 @@
     &::after {
       max-width: max-content;
       padding-top: 10px;
+      color: $base-black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
     }
   }
 }
